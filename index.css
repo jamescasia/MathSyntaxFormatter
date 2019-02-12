@@ -3,7 +3,36 @@
     width: 100%;
     background-color: powderblue;
   } */
+body{
+  margin: 0;
+  padding: 0;
+}
 h2{
   border: 3px solid black;
   border-radius: 5px;
+  width: 80%;
+  margin: 15px;
+  padding: 15px;
+}
+.container{
+  margin: 0;
+  /* background-color: rgb(199, 186, 169); */
+  height: 100vh;
+  width: 100vw;
+}
+.ans{
+  padding: 15px;
+}
+/* .sandbox{
+  justify-content: center;
+  display: flex;
+} */
+#ltx{
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(230,230,230);
+  border: none;
 }

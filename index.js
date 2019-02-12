@@ -33,7 +33,8 @@ window.onload = () => {
 			
 		}
 		document.getElementById('ltx').value = ''
-		document.getElementById('ans').innerHTML = `$${temp}$`
+		// document.getElementById('ans').innerHTML = temp
+		document.getElementById('ans').insertAdjacentHTML("afterend", curr)
 		MathJax.Hub.Queue(["Typeset",MathJax.Hub])
 		console.log(curr)
 	}

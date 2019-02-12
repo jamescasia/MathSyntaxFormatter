@@ -4,22 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>MathJax example</title>
-  <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
+  <!-- <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css"> -->
   <link rel="stylesheet" href="index.css">
   <div class="container">
     <br>
-    <div class="row">
-      <div class="col-lg-6 offset-lg-2">
-          <div class="sandbox text-center">
-            <div id="inputs"><textarea id="ltx" rows="5" cols="100"></textarea></div>
-            <br>
-            <h2 class="text-center bord" id="results"></h2>
-            <div id="ans">
-              
-            </div>
-          </div>
+    <div class="sandbox">
+      <br>
+      <h2 class="bord" id="results"></h2>
+      <br>
+      <div id="ans">
       </div>
     </div>
+    <div id="inputs"><input type="text" placeholder="Insert equation here..." id="ltx"></input></div>
   </div>
   
   <!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
