@@ -1,24 +1,40 @@
-var box = document.getElementById("box");
+document.addEventListener("DOMContentLoaded", function(event) { 
+    var typingTimer;
+    var doneTypingInterval = 400;
+    
+    let doneTyping = function() {
+	if ($("#ltx").val() != "") {
+	    $("#results").html("<p>$"+$("#ltx").val()+"$</p>");
+	    MathJax.Hub.Queue(["Typeset",MathJax.Hub])
+	} else {
+	    $("#results").empty();
+	}
+    }
+    
+    $("#ltx").keyup(function(){
+	clearTimeout(typingTimer);
+	typingTimer = setTimeout(doneTyping, doneTypingInterval);
+    });
+});
 
-var node = `<div><div>`
+window.onload = () => {
+	var dis = [];
+	document.getElementById('ltx').addEventListener('keydown', e => {
+		e.key == 'Enter' ? newData() : null
+	})
 
-function add (e){ 
-    return  `<div >
-    ${e}
-            </div>`;
-
-   // return  '<div class="article"><a href =' +article.url+'><h2>'+article.title+'</h2><img src ='+article.urlToImage+'><p>'+article.description+'</p></a></div>';
-}
-
-function runScript(e) {
-    //See notes about 'which' and 'key'
-    // alert('dafa');
-    if (e.keyCode == 13) {
-        // alert('dafa');
-        var tb = document.getElementById("scriptBox");
-        eval(tb.value);
-        return false;
-    } 
-    box.appendChild( add(e));
- 
+	function newData(){
+		var curr = document.getElementById('results').innerHTML
+		dis.push(curr)
+		var temp = ''
+		for(i = 0; i < dis.length; i++){
+			// temp = `<br><h2 class="text-center bord" id="results"><p>$${temp}${dis[i]}$</p></h2>`
+			temp += dis[i]
+			
+		}
+		document.getElementById('ltx').value = ''
+		document.getElementById('ans').innerHTML = `$${temp}$`
+		MathJax.Hub.Queue(["Typeset",MathJax.Hub])
+		console.log(curr)
+	}
 }

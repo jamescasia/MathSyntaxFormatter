@@ -1,29 +1,33 @@
- 
 <!DOCTYPE html>
 <html>
-  <head>
-      <link rel="stylesheet" type="text/css" href="index.css">
-    <script
-      type="text/javascript"
-      src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" 
-
-    ></script>
-    <script src = "index.js"></script>
-    <title>MathJax</title>
-  </head>
-  <body>
-    <!-- $$ 0 \leq \lim_{n\to \infty}\frac{n!}{(2n)!} \leq \lim_{n\to \infty}
-    \frac{n!}{(n!)^2} = \lim_{k \to \infty, k = n!}\frac{k}{k^2} = \lim_{k \to
-    \infty}\frac{1}{k} = 0.$$
-
-    $$ \ln (\frac {u}{x} $$ -->
-    <div id="box">
-
-      
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathJax example</title>
+  <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
+  <link rel="stylesheet" href="index.css">
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-lg-6 offset-lg-2">
+          <div class="sandbox text-center">
+            <div id="inputs"><textarea id="ltx" rows="5" cols="100"></textarea></div>
+            <br>
+            <h2 class="text-center bord" id="results"></h2>
+            <div id="ans">
+              
+            </div>
+          </div>
+      </div>
     </div>
-
-    <!-- <input type = "text" style = "width:100%"></input> -->
-    <textarea id="scriptBox" type="text" style = "width: 100%" onkeypress="return runScript(event)" ></textarea>
-
-  </body>
+  </div>
+  
+  <!-- <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+  <script type="text/javascript" async src="MathJax\MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <!-- <script type="text/javascript" async src="MathJax\MathJax.js"></script> -->
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});</script>
+  <!-- <script defer src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+  <script src="index.js"></script>
+  <script src="node_modules\jquery\dist\jquery.min.js"></script>
+</body>
 </html>
