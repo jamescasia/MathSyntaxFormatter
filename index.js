@@ -18,24 +18,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 window.onload = () => {
-	var dis = [];
 	document.getElementById('ltx').addEventListener('keydown', e => {
 		e.key == 'Enter' ? newData() : null
 	})
 
 	function newData(){
 		var curr = document.getElementById('results').innerHTML
-		dis.push(curr)
-		var temp = ''
-		for(i = 0; i < dis.length; i++){
-			// temp = `<br><h2 class="text-center bord" id="results"><p>$${temp}${dis[i]}$</p></h2>`
-			temp += dis[i]
-			
+		if(curr != ''){
+			// dis.push(curr)
+			// var temp = ''
+			// for(i = 0; i < dis.length; i++){
+			// 	// temp = `<br><h2 class="text-center bord" id="results"><p>$${temp}${dis[i]}$</p></h2>`
+			// 	temp += dis[i]
+				
+			// }
+			document.getElementById('ltx').value = ''
+			// document.getElementById('ans').innerHTML = temp
+			curr = `<div class="addNew">${curr}</div>`
+			document.getElementById('ans').insertAdjacentHTML("beforeend", curr)
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub])
+			// console.log(curr)
 		}
-		document.getElementById('ltx').value = ''
-		// document.getElementById('ans').innerHTML = temp
-		document.getElementById('ans').insertAdjacentHTML("afterend", curr)
-		MathJax.Hub.Queue(["Typeset",MathJax.Hub])
-		console.log(curr)
 	}
 }

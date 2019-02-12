@@ -7,21 +7,29 @@ body{
   margin: 0;
   padding: 0;
 }
-h2{
-  border: 3px solid black;
-  border-radius: 5px;
-  width: 80%;
-  margin: 15px;
-  padding: 15px;
+.bord{
+  box-sizing: border-box;
+  border: 5px solid black;
+  width: 100%;
+  /* bottom: 0; */
+  /* margin: 5px; */
+  /* padding: 0px 15px; */
 }
 .container{
   margin: 0;
   /* background-color: rgb(199, 186, 169); */
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 .ans{
   padding: 15px;
+}
+.addNew{
+  box-sizing: border-box;
+  padding: 15px;
+  border: 5px solid white;
+  border-radius: 20px;
+  background-color: powderblue;
 }
 /* .sandbox{
   justify-content: center;
