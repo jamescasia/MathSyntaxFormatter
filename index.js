@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
     var typingTimer;
-    var doneTypingInterval = 400;
+    var doneTypingInterval = 0;
     
     let doneTyping = function() {
 	if ($("#ltx").val() != "") {
